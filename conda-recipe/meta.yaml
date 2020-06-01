@@ -1,0 +1,21 @@
+package:
+  name: foo
+  version: 0.1
+
+source:
+  path: ../
+
+build:
+  script:
+    - {{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - python
+    - pip
+  run:
+    - python
+
+test:
+  commands:
+    - foo_main
